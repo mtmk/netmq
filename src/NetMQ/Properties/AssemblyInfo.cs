@@ -36,3 +36,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("3.3.0.7")]
 [assembly: AssemblyFileVersion("3.3.0.7")]
+[assembly: AssemblyInformationalVersion("3.3.0.7 (3.5 Port v0.2)")]
