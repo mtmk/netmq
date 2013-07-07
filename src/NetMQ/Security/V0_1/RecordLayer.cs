@@ -468,25 +468,25 @@ namespace NetMQ.Security.V0_1
     {
 			if (m_decryptionBulkAlgorithm != null)
 			{
-				m_decryptionBulkAlgorithm.Dispose();
+				m_decryptionBulkAlgorithm.Clear();
 				m_decryptionBulkAlgorithm = null;
 			}
 
 			if (m_encryptionBulkAlgorithm != null)
 			{
-				m_encryptionBulkAlgorithm.Dispose();
+				m_encryptionBulkAlgorithm.Clear();
 				m_encryptionBulkAlgorithm = null;
 			}
 
 			if (m_decryptionHMAC != null)
 			{
-				m_decryptionHMAC.Dispose();
+				m_decryptionHMAC.Clear();
 				m_decryptionHMAC = null;
 			}
 
 			if (m_encryptionHMAC != null)
 			{
-				m_encryptionHMAC.Dispose();
+				m_encryptionHMAC.Clear();
 				m_encryptionHMAC = null;
 			}
 

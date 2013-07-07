@@ -350,7 +350,7 @@ namespace NetMQ.Security.V0_1
       m_remoteHash.TransformFinalBlock(new byte[0], 0, 0);
 
       byte[] seed = m_remoteHash.Hash;
-      m_remoteHash.Dispose();
+      m_remoteHash.Clear();
       m_remoteHash = null;
 
       string label;
@@ -385,7 +385,7 @@ namespace NetMQ.Security.V0_1
       m_localHash.TransformFinalBlock(new byte[0], 0, 0);
 
       byte[] seed = m_localHash.Hash;
-      m_localHash.Dispose();
+      m_localHash.Clear();
       m_localHash = null;
 
       string label;
@@ -497,21 +497,17 @@ namespace NetMQ.Security.V0_1
 
     public void Dispose()
     {
-			if (m_rng != null)
-			{
-				m_rng.Dispose();
-				m_rng = null;
-			}
+		m_rng = null;
 
     	if (m_remoteHash != null)
 			{
-				m_remoteHash.Dispose();
+				m_remoteHash.Clear();
 				m_remoteHash = null;
 			}
 
 			if (m_localHash != null)
 			{
-				m_localHash.Dispose();
+				m_localHash.Clear();
 				m_localHash = null;
 			}
 
